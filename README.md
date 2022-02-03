@@ -1,4 +1,9 @@
 # -Joint-Object-Detection-and-Depth-Estimation-in-Image-
+Repository for the Deep Learning course project:
+
+- Milad Samimifar
+- Pooria Ashrafian
+
 Object detection method that can simultaneously estimate the positions and depth of the objects from images
 
 Object detection web app:
@@ -8,7 +13,7 @@ Object detection web app:
 ```cd Object_detection_web_app```
 
 ```wget https://pjreddie.com/media/files/yolov3.weights```
- 
+
 2.	Execute the code below: (Executed only once) 
 
 ```python manage.py collectstatic```
