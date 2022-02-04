@@ -11,23 +11,19 @@ def return_boxes(net, image, iou_thresh, nms_thresh, LABELS, threshold, state):
     np.random.seed(42)
     COLORS = np.random.randint(0, 255, size=(len(LABELS), 3), dtype="uint8")
 
-    #jupyter
     image = cv2.resize(image, (640, 480))   # dtype=int, [0...255]
     image1 = image.astype(np.float32)/255.0 # [0...1]
-    #image = image * 255
-    #image = image.astype(np.uint8)
-    #end jupyter
 
     #Depth
     rate = 0.3  # rate of the rectangle in the middle of each bounding box to estimate better depth
     res = (1-rate)/2
     # load json and create model
-    json_file = open('./../models_depth/Unet/1.json', 'r')
+    json_file = open('./../models_depth/Unet/2.json', 'r')
     loaded_model_json = json_file.read()
     json_file.close()
     model = model_from_json(loaded_model_json)
     # load weights into new model
-    model.load_weights("./../models_depth/Unet/1.h5")
+    model.load_weights("./../models_depth/Unet/2.h5")
     print("Loaded model from disk")
     dep_image = model.predict(np.expand_dims(image1, axis=0))[0].squeeze()
     dep_resized = cv2.resize(dep_image, (640, 480)).astype(np.float32)
