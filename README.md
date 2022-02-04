@@ -8,7 +8,7 @@ Object detection method that can simultaneously estimate the positions and depth
 
 ---
 
-### Joint object detection and depth estimation web app using streamlit(recomended): Object_detection_web_app_streamlit repository
+### Joint object detection and depth estimation web app using streamlit (recomended): Object_detection_web_app_streamlit repository
 
 1.  Download yolov3 weights and put it in Object_detection_web_app_streamlit folder:
 
@@ -16,13 +16,21 @@ Object detection method that can simultaneously estimate the positions and depth
 wget -nc https://pjreddie.com/media/files/yolov3.weights -P Object_detection_web_app_streamlit
 ```
 
-2. install requirements:
+2.  Download our depth model weights and put it in ./models_depth/Unet folder:
+
+```
+gdown --id 1fvzPVqKj46WjaYw6OUr1a38KblWkGC4W -O ./models_depth/Unet/2.h5 # weights
+
+gdown --id 1g685-v1qGv6NBE7nhY0LSQDgUemJXarc -O ./models_depth/Unet/2.json # model(json file)
+```
+
+3. install requirements:
 
 ```
 pip install streamlit opencv-python black
 ```
 
-3.	Execute: 
+4.	Execute: 
 
 ```
 cd Object_detection_web_app_streamlit
@@ -41,22 +49,14 @@ streamlit run ./src/app.py
 wget -nc https://pjreddie.com/media/files/yolov3.weights -P Object_detection_web_app
 ```
 
-2.  Download our depth model weights and put it in ./models_depth/Unet folder:
-
-```
-gdown --id 1fvzPVqKj46WjaYw6OUr1a38KblWkGC4W -O ./models_depth/Unet/2.h5 # weights
-
-gdown --id 1g685-v1qGv6NBE7nhY0LSQDgUemJXarc -O ./models_depth/Unet/2.json # model(json file)
-```
-
-3.	Execute the code below: (Only once) 
+2.	Execute the code below: (Only once) 
 
 ```
 cd Object_detection_web_app
 python manage.py collectstatic
 ```
 
-4.	Execute: 
+3.	Execute: 
 
 ```
 python manage.py runserver
