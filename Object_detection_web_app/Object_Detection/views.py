@@ -14,6 +14,9 @@ from .utils import *
 @csrf_exempt
 def object_detection_api(api_request):
     json_object = {'success': False}
+    
+    threshold = 4.0
+    state = 'MORE'
 
     if api_request.method == "POST":
 
@@ -21,13 +24,13 @@ def object_detection_api(api_request):
             base64_data = api_request.POST.get("image64", None).split(',', 1)[1]
             data = b64decode(base64_data)
             data = np.array(Image.open(io.BytesIO(data)))
-            detection_time = detection(data)
+            detection_time = detection(data, threshold, state)
 
         elif api_request.FILES.get("image", None) is not None:
             image_api_request = api_request.FILES["image"]
             image_bytes = image_api_request.read()
             image = Image.open(io.BytesIO(image_bytes))
-            detection_time = detection(image)
+            detection_time = detection(image, threshold, state)
 
     json_object['success'] = True
     json_object['time'] = str(round(detection_time))+" seconds"
@@ -39,7 +42,7 @@ def detect_request(api_request):
     return render(api_request, 'index.html')
 
 
-def detection(original_image):
+def detection(original_image, threshold=4.0, state='MORE'):
     cfg_file = './yolov3.cfg'
     weight_file = './yolov3.weights'
     names = './coco.names'
@@ -50,6 +53,6 @@ def detection(original_image):
     nms_thresh = 0.6
     iou_thresh = 0.4
 
-    detection_time = return_boxes(m, original_image, iou_thresh, nms_thresh, class_names)
+    detection_time = return_boxes(m, original_image, iou_thresh, nms_thresh, class_names, threshold, state)
 
     return detection_time
