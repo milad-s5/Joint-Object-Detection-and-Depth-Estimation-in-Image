@@ -43,7 +43,8 @@ cd Object_detection_web_app_streamlit
 streamlit run ./src/app.py
 ```
 
-![image](https://user-images.githubusercontent.com/82322980/152588006-5e305f46-3a49-474f-8714-e80be1a5aeb4.png)
+![image](https://user-images.githubusercontent.com/82322980/152633666-0a391c8c-9c83-4783-8d4d-e4516e5897a0.png)
+![image](https://user-images.githubusercontent.com/82322980/152633674-8200189d-ba2f-4346-a2c1-8baad4771a5e.png)
 
 ---
 
@@ -68,7 +69,7 @@ python manage.py collectstatic
 python manage.py runserver
 ```
 
-![image](https://user-images.githubusercontent.com/82322980/152589707-0c5f9c29-2b75-4499-87c3-d28a96b3e070.png)
+![image](https://user-images.githubusercontent.com/82322980/152633618-3ca2c6a7-f931-41a9-9089-c5d18d32d937.png)
 
 ---
 
