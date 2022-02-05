@@ -43,7 +43,7 @@ cd Object_detection_web_app_streamlit
 streamlit run ./src/app.py
 ```
 
-![image](https://user-images.githubusercontent.com/82322980/152633666-0a391c8c-9c83-4783-8d4d-e4516e5897a0.png)
+![image](https://user-images.githubusercontent.com/82322980/152640791-96167abe-038a-49e0-a4d7-189d90908686.png)
 
 ---
 
