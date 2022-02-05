@@ -6,6 +6,10 @@ Repository for the Deep Learning course project:
 
 Object detection method that can simultaneously estimate the positions and depth of the objects from images. (Based on NYU-Depth V2 dataset)
 
+The [NYU-Depth V2 data set](https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html) is comprised of video sequences from a variety of indoor scenes as recorded by both the RGB and Depth cameras from the Microsoft Kinect.
+
+- [Labeled dataset (~2.8 GB)](http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/nyu_depth_v2_labeled.mat)
+
 ---
 
 ### Joint object detection and depth estimation web app using streamlit (recomended): Object_detection_web_app_streamlit repository
