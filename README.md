@@ -44,7 +44,6 @@ streamlit run ./src/app.py
 ```
 
 ![image](https://user-images.githubusercontent.com/82322980/152633666-0a391c8c-9c83-4783-8d4d-e4516e5897a0.png)
-![image](https://user-images.githubusercontent.com/82322980/152633674-8200189d-ba2f-4346-a2c1-8baad4771a5e.png)
 
 ---
 
