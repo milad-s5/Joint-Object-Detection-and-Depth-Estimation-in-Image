@@ -84,7 +84,6 @@ def return_boxes(net, image, iou_thresh, nms_thresh, LABELS, threshold, state):
               if(Depth >= threshold):
                 color = [int(c) for c in COLORS[classIDs[i]]]
                 cv2.rectangle(image, (x, y), (x + w, y + h), color, 2)
-                #text = "{}: {:.2f}, Depth : {:.2f}".format(LABELS[classIDs[i]], confidences[i], Depth)
                 text = "{}: {:.2f}".format(LABELS[classIDs[i]], confidences[i])
                 cv2.putText(image, text, (x, y - 5),
                             cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 2)
@@ -95,15 +94,12 @@ def return_boxes(net, image, iou_thresh, nms_thresh, LABELS, threshold, state):
               if(Depth < threshold):
                 color = [int(c) for c in COLORS[classIDs[i]]]
                 cv2.rectangle(image, (x, y), (x + w, y + h), color, 2)
-                #text = "{}: {:.2f}, Depth : {:.2f}".format(LABELS[classIDs[i]], confidences[i], Depth)
                 text = "{}: {:.2f}".format(LABELS[classIDs[i]], confidences[i])
                 cv2.putText(image, text, (x, y - 5),
                             cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 2)
                 text = "Depth : {:.2f}".format(Depth)
                 cv2.putText(image, text, (x, y + h + 15),
                             cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 2)
-
-    #cv2.imshow("Image", image)
 
     _, t = plt.subplots(1, 1)
     t.imshow(image)
