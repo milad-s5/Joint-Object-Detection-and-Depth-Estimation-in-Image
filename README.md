@@ -4,7 +4,7 @@ Repository for the Deep Learning course project:
 - Milad Samimifar: 400205577
 - Pooria Ashrafian: 96101227
 
-Object detection method that can simultaneously estimate the positions and depth of the objects from images
+Object detection method that can simultaneously estimate the positions and depth of the objects from images. (Based on NYU-Depth V2 dataset)
 
 ---
 
@@ -84,7 +84,15 @@ Joint_notebook.ipynb:
 
 * Download dataset and preprocessing
 * Train Unet model for depth estimation
+
+![image](https://user-images.githubusercontent.com/82322980/152643472-a6e9a285-3fd0-4d47-9efe-e2299a5858ae.png)
+
 * Yolov3 Object detection
+
+![image](https://user-images.githubusercontent.com/82322980/152643493-9863a272-01b7-4cc1-a165-400b547c3a0f.png)
+
 * Joint model and test
+
+![image](https://user-images.githubusercontent.com/82322980/152643505-78c7084d-df29-4f39-83d6-e2511b14a96d.png)
 
 ---
