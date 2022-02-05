@@ -55,14 +55,20 @@ streamlit run ./src/app.py
 wget -nc https://pjreddie.com/media/files/yolov3.weights -P Object_detection_web_app
 ```
 
-2.	Execute the code below: (Only once) 
+2.  Install requirements:
+
+```
+pip install -r ./Object_detection_web_app/requirements.txt
+```
+
+3.	Execute the code below: (Only once) 
 
 ```
 cd Object_detection_web_app
 python manage.py collectstatic
 ```
 
-3.	Execute: 
+4.	Execute: 
 
 ```
 python manage.py runserver
