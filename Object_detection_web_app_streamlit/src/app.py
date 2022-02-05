@@ -9,7 +9,8 @@ from keras.models import model_from_json
 
 @st.cache
 def return_boxes(net, image, iou_thresh, nms_thresh, LABELS, threshold, state):
-
+    cmap = plt.cm.jet
+    cmap.set_bad(color="black")
     # initialize a list of colors to represent each possible class label
     np.random.seed(42)
     COLORS = np.random.randint(0, 255, size=(len(LABELS), 3), dtype="uint8")
@@ -106,6 +107,10 @@ def return_boxes(net, image, iou_thresh, nms_thresh, LABELS, threshold, state):
     t.imshow(image)
     plt.axis('off')
     plt.savefig("./images/test.jpeg", dpi=360, bbox_inches='tight')
+    
+    t.imshow(dep_resized, cmap=plt.get_cmap(cmap))
+    plt.axis('off')
+    plt.savefig("./images/depth.jpeg", dpi=360, bbox_inches='tight')
 
     return detection_time
 
@@ -147,9 +152,14 @@ else:
 
 detection_time = detection(image, threshold, state, iou_thresh)
 image = np.array(Image.open('./images/test.jpeg'))
+depth_img = np.array(Image.open('./images/depth.jpeg'))
 
 st.image(
     image, caption=f"Processed image", use_column_width=True,
+)
+
+st.image(
+    depth_img, caption=f"Depth image", use_column_width=True,
 )
 
 st.write('Time of object detection:', detection_time)
