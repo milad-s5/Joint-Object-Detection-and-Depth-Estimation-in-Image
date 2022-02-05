@@ -22,9 +22,9 @@ wget -nc https://pjreddie.com/media/files/yolov3.weights -P Object_detection_web
 
 2.  Download our Unet depth model weights and put it in ./models_depth/Unet folder:
 
-Weighs: https://drive.google.com/file/d/1fvzPVqKj46WjaYw6OUr1a38KblWkGC4W/view?usp=sharing
+- Weighs: https://drive.google.com/file/d/1fvzPVqKj46WjaYw6OUr1a38KblWkGC4W/view?usp=sharing
 
-Model (Json file): https://drive.google.com/file/d/1g685-v1qGv6NBE7nhY0LSQDgUemJXarc/view?usp=sharing
+- Model (Json file): https://drive.google.com/file/d/1g685-v1qGv6NBE7nhY0LSQDgUemJXarc/view?usp=sharing
 
 Shell commmand:
 
