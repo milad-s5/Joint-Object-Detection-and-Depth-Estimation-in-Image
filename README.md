@@ -1,8 +1,8 @@
 # Joint Object Detection and Depth Estimation in Image
 Repository for the Deep Learning course project:
 
-- Milad Samimifar: 400205577
-- Pooria Ashrafian: 96101227
+- Milad Samimifar
+- Pooria Ashrafian
 
 Object detection method that can simultaneously estimate the positions and depth of the objects from images. (Based on NYU-Depth V2 dataset)
 
@@ -87,7 +87,7 @@ python manage.py runserver
 Joint_notebook.ipynb:
 
 * Download dataset and preprocessing
-* Train Unet model for depth estimation
+* Train Unet model for depth estimation [[1]](#1)
 
 ![image](https://user-images.githubusercontent.com/82322980/152643472-a6e9a285-3fd0-4d47-9efe-e2299a5858ae.png)
 
@@ -100,3 +100,8 @@ Joint_notebook.ipynb:
 ![image](https://user-images.githubusercontent.com/82322980/152643505-78c7084d-df29-4f39-83d6-e2511b14a96d.png)
 
 ---
+
+### Reference
+
+<a id="1">[1]</a> 
+Ibraheem Alhashim and Peter Wonka. High quality monocular depth estimation via transfer learning. arXiv preprint arXiv:1812.11941, 2018.
